@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="//apps.wialon.com/plugins/wialon/interval/interval.wialon.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="shortcut icon" href="img/logoOnglet.png">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.localisation.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.7/xlsx.core.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.core.min.js"></script>
+        <script src="//apps.wialon.com/plugins/wialon/interval/interval.wialon.min.js"></script>
+    </head>
+    <body>
+        <div class="top">
+            <img src="img/logo.png" id="logo" alt="logo">            
+            <div class="wrap">
+                <p></p>
+            </div>
+        </div>
+        <div id="loader">
+            <span class="loader loader-quart"></span>
+        </div>
+        <div class="content">
+            <div class="wrap">
+                <div class="head-content">
+                    <div>
+                        <input type="file" id="excelfile" />
+                        <input type="button" id="importFile" />
+                    </div>
+                    <div class="timepicker" id="ranging-time-wrap"></div>
+                    <a title="doc" href="doc/Documentation_App_Compare_Excel.pdf" target=_blank>
+                        <img src="img/info.png" alt="info" id="logoinfo">
+                    </a>
+                    <a title="Print" id="btn-print">
+                        <img src="img/print.png" alt="print">
+                    </a>
+                </div><br>
+                <div>
+                    <form>
+                        <div id="DfiltreVolMin" class="Dfiltres">
+                            <label for="filtreVolMin" class="label-filtre"><b>Différence minimum (L) : </b></label>
+                            <input name="filtreVolMin" class="input-filtre" id="filtreVolMin" type="number" value="1" min="0" step="5" />
+                        </div>
+                    </form>
+                </div>
+                <div id="result">
+                    <h5>Liste des irrégularités :</h5>
+                    <table id="result-table">
+                        <thead id="result-tabhead"></thead>                
+                        <tbody id="result-tabbody" class="tabbody over-scroll"></tbody>
+                    </table>
+                    <br><br>
+                </div><br>
+                <div id="errors">
+                    <h5>Liste des erreurs :</h5>
+                    <table id="error-table">                
+                        <tbody id="error-tabbody" class="tabbody over-scroll"></tbody>
+                    </table>
+                    <br><br>
+                </div>                
+            </div>
+        </div>
+        <div id="log"></div>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
